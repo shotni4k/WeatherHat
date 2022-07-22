@@ -1,0 +1,55 @@
+2022-07-22T00:20:55.649136+0600 INFO user-id 1070213400 
+ user-name - ShOtNiK
+ text - /start
+2022-07-22T00:21:10.974489+0600 INFO user-id 1070213400 
+ user-name - ShOtNiK
+ text - /help
+2022-07-22T00:22:01.271521+0600 INFO 
+user-id 1070213400 
+ user-name - ShOtNiK
+ text - /start
+2022-07-22T00:22:37.697134+0600 INFO 
+ user-id 1070213400 
+ user-name - ShOtNiK
+ text - /start
+2022-07-22T00:22:58.234423+0600 INFO 
+ user-id 1070213400 
+ user-name - ShOtNiK
+ text - /locate_me
+2022-07-22T00:23:04.449674+0600 INFO 
+ user-id 1070213400 
+ user-name - ShOtNiK
+ text - /locate_me
+2022-07-22T00:24:56.784043+0600 INFO 
+ user-id 1070213400 
+ user-name - ShOtNiK
+ text - /locate_me
+2022-07-22T00:25:48.863373+0600 INFO 
+ user-id 1070213400 
+ user-name - ShOtNiK
+ text - /help
+2022-07-22T00:26:03.284244+0600 INFO 
+ user-id 1070213400 
+ user-name - ShOtNiK
+ text - /help
+2022-07-22T00:26:30.001388+0600 INFO 
+ user-id 1070213400 
+ user-name - ShOtNiK
+ text - /help
+2022-07-22T00:26:40.952529+0600 INFO 
+ user-id 1070213400 
+ user-name - ShOtNiK
+ text - /locate_me
+2022-07-22T00:26:46.096470+0600 INFO 
+ user-id 1070213400 
+ user-name - ShOtNiK
+ text - None
+2022-07-22T00:28:34.604613+0600 INFO 
+ user-id 1070213400 
+ user-name - ShOtNiK
+ text - /locate_me
+2022-07-22T00:28:43.030435+0600 INFO 
+ user-id 1070213400 
+ user-name - ShOtNiK
+ text - None
+ lat&long = {"latitude": 50.221512, "longitude": 73.057333}
