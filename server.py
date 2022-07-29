@@ -19,7 +19,7 @@ logger.add("log/INFO.log",colorize=True, format="{time} {level} {message}", leve
 @dp.message_handler(commands = ['start'])
 async def send_welcome(message: types.Message):
     logger.info(f"\n user-id {message.from_user.id} \n user-name - {message.from_user.full_name}\n text - {message.text}")
-    await message.answer(get_answer_command(message),reply_markup = command_btn())
+    await message.answer(get_answer_command(text=message.text),reply_markup = command_btn())
 
 @dp.message_handler(commands=['help'])
 async def help_answer(message: types.Message):
@@ -43,5 +43,6 @@ async def cmd_locate_me(message: types.Message):
 @dp.callback_query_handler(lambda c: c.data == '/locate_me')
 async def handle_help_button(callback_query: types.CallbackQuery):
     await callback_query.message.answer(get_answer_command(text= callback_query.data), reply_markup=locate_btn())
+
 if __name__ == "__main__":
     executor.start_polling(dp, skip_updates=True)
