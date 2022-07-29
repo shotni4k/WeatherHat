@@ -1,3 +1,4 @@
+#!/usr/bin/env python3.10.5
 import ssl 
 import json
 from json import JSONDecodeError
