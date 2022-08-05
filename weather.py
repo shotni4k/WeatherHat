@@ -8,9 +8,11 @@ from enum import Enum
 import urllib.request
 from urllib.error import URLError
 from datetime import datetime
+import pytz
+from tzlocal import get_localzone
 
 
-from config_files.config import Coordinates,OPENWEATHER_URL
+from config_files.data import Coordinates,OPENWEATHER_URL
 
 Celsius: TypeAlias = float
 Wind: TypeAlias = float
@@ -106,11 +108,10 @@ def _parse_weather_type(openweather_dict: dict) -> WeatherType:
             return _weather_type
     raise 
 
-def _parse_sun_time(
-        openweather_dict: dict,
-        time: Literal["sunrise"] | Literal["sunset"]) -> datetime:
-    return datetime.fromtimestamp(openweather_dict["sys"][time])
-
+def _parse_sun_time(openweather_dict: dict,
+                    time: Literal["sunrise"] | Literal["sunset"]) -> datetime:
+    return  datetime.fromtimestamp(openweather_dict["sys"][time], pytz.timezone('Asia/Almaty'))     
+  
 def _parse_city(openweather_dict: dict) -> str:
     try:
         return openweather_dict["name"]
@@ -130,4 +131,5 @@ def _format_weather(weather: Weather) -> str:
 
 
 if __name__ == "__main__":
+    print(get_localzone())
     print(get_weather(Coordinates(latitube=55.7, longitube=36.7)))    

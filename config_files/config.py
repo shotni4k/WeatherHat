@@ -9,7 +9,7 @@ from aiogram import types
 
 from dataclasses import dataclass
 
-def _get_OWMapi_key() -> str:
+def get_OWMapi_key() -> str:
     owm_key = os.getenv("OWM_API_KEY")
     if owm_key is None:
         logger.critical("OWM key is None")
@@ -23,19 +23,6 @@ def get_telegram_api_key()-> str:
         return sys.exit()
     return token
     
-OPENWEATHER_URL = (
-    "https://api.openweathermap.org/data/2.5/weather?"
-    "lat={latitude}&lon={longitude}&"
-    "appid=" + _get_OWMapi_key() + "&lang=ru&"
-    "units=metric"
-)
-
-@dataclass(frozen=True, slots = True)
-class Coordinates():
-    latitube: float
-    longitube: float
-
-
 def get_answer_command(text: str) -> str:
     try:
         with open("config_files/answer.json", "r", encoding="utf-8") as file:
